@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VOX SUL | Uma nova forma de viver em Torres</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="O primeiro capítulo de um novo bairro às margens do Rio Mampituba, em Torres (RS). 290 lotes, clubes, marina e catamarã. Vendas abrem em 19 de novembro.">
+<meta property="og:title" content="VOX SUL | Uma nova forma de viver em Torres">
+<meta property="og:description" content="O primeiro capítulo de um novo bairro às margens do Rio Mampituba. Vendas abrem em 19 de novembro.">
+<meta property="og:image" content="assets/rio-por-do-sol.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#14223f;
+  --navy-2:#0e1a33;
+  --sand:#dcd7c3;
+  --sand-2:#ece9dc;
+  --paper:#f6f4ec;
+  --ink:#1b2438;
+  --muted:#5d6577;
+  --gold:#c9a463;
+  --line:rgba(20,34,63,.14);
+  --serif:"Montserrat",system-ui,sans-serif;
+  --sans:"Manrope",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;font-weight:500;color:var(--gold)}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.14;letter-spacing:-.02em}
+h2{font-size:clamp(28px,4vw,46px)}
+h3{font-size:clamp(20px,2.4vw,26px)}
+.lead{font-size:clamp(18px,2vw,21px);color:var(--muted);max-width:56ch}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:2px;background:var(--gold);color:var(--navy-2);font-weight:600;font-size:14px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:0;cursor:pointer;transition:transform .2s,background .2s}
+.btn:hover{background:#d6b377;transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5)}
+.btn.ghost:hover{background:rgba(255,255,255,.1)}
+
+/* nav */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,box-shadow .3s}
+.nav.solid{background:rgba(14,26,51,.94);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(255,255,255,.08)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:inline-flex;align-items:center;gap:14px;text-decoration:none}
+.logo img{height:42px;width:auto}
+.logo i{width:1px;height:26px;background:rgba(255,255,255,.35)}
+.logo span{font-family:var(--serif);font-size:19px;letter-spacing:.34em;color:var(--gold);font-weight:600}
+.nav ul{display:flex;gap:30px;list-style:none}
+.nav ul a{color:rgba(255,255,255,.85);text-decoration:none;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.nav ul a:hover{color:#fff}
+.nav .btn{padding:11px 20px;font-size:12px}
+@media(max-width:900px){.nav ul{display:none}}
+@media(max-width:560px){.logo{gap:10px}.logo img{height:34px}.logo span{font-size:15px}.logo i{height:20px}.nav .btn{padding:10px 12px;font-size:10.5px;white-space:nowrap}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;background:var(--navy-2) url(assets/rio-por-do-sol.jpg) center/cover no-repeat;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,26,51,.55) 0%,rgba(14,26,51,.15) 35%,rgba(14,26,51,.85) 100%);z-index:-1}
+.hero .wrap{padding-block:140px 72px}
+.hero h1{font-size:clamp(34px,6vw,78px);max-width:17ch;margin:18px 0 22px}
+.hero p.sub{font-size:clamp(18px,2.2vw,23px);max-width:44ch;color:rgba(255,255,255,.88);font-weight:300}
+.hero .cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.date-chip{display:inline-flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:40px;padding:12px 20px;border:1px solid rgba(255,255,255,.28);background:rgba(14,26,51,.45);backdrop-filter:blur(6px);font-size:14px;letter-spacing:.04em}
+.date-chip b{font-family:var(--serif);font-size:21px;font-weight:600;color:var(--gold);line-height:1}
+
+/* numbers */
+.numbers{background:var(--navy);color:#fff}
+.numbers .wrap{display:grid;grid-template-columns:repeat(5,1fr);gap:0}
+.num{padding:44px 20px;text-align:center;border-left:1px solid rgba(255,255,255,.1)}
+.num:first-child{border-left:0}
+.num strong{display:block;white-space:nowrap;font-family:var(--serif);font-weight:600;font-size:clamp(24px,2.8vw,38px);font-weight:500;color:var(--gold);line-height:1}
+.num span{display:block;margin-top:10px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+@media(max-width:820px){.numbers .wrap{grid-template-columns:repeat(2,1fr)}.num{border-left:0;border-top:1px solid rgba(255,255,255,.1)}.num:nth-child(-n+2){border-top:0}.num:last-child{grid-column:1/-1}}
+
+section{padding-block:clamp(72px,10vw,130px)}
+.head{max-width:760px;margin-bottom:56px}
+.head h2{margin:14px 0 20px}
+
+/* pillars */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pillar{position:relative;overflow:hidden;aspect-ratio:3/4.2;color:#fff;display:flex;align-items:flex-end}
+.pillar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}
+.pillar:hover img{transform:scale(1.05)}
+.pillar::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(14,26,51,.92))}
+.pillar div{position:relative;z-index:1;padding:28px}
+.pillar h3{margin-bottom:8px}
+.pillar p{font-size:15px;color:rgba(255,255,255,.86)}
+@media(max-width:820px){.pillars{grid-template-columns:1fr}.pillar{aspect-ratio:4/4.4}}
+
+/* video */
+.film{background:var(--navy-2);color:#fff}
+.film .head p{color:rgba(255,255,255,.72)}
+.film video{width:100%;max-height:78vh;background:#000;border:1px solid rgba(255,255,255,.12)}
+
+/* clubs */
+.clubs{background:var(--sand-2)}
+.club-feature{display:grid;grid-template-columns:1.1fr 1fr;gap:0;margin-bottom:22px;background:var(--paper)}
+.club-feature:nth-of-type(even){grid-template-columns:1fr 1.1fr}
+.club-feature:nth-of-type(even) .ph{order:2}
+.club-feature .ph{min-height:420px;min-width:0}
+.club-feature .tx{min-width:0}
+.club-feature .ph img{width:100%;height:100%;object-fit:cover}
+.club-feature .tx{padding:clamp(28px,5vw,64px);display:flex;flex-direction:column;justify-content:center;gap:14px}
+.club-feature .tx p{color:var(--muted)}
+.tag{display:inline-block;align-self:flex-start;padding:5px 12px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;border:1px solid var(--line);color:var(--navy)}
+@media(max-width:820px){.club-feature,.club-feature:nth-of-type(even){grid-template-columns:minmax(0,1fr)}.club-feature:nth-of-type(even) .ph{order:0}.club-feature .ph{min-height:0;height:280px;width:100%}}
+.club-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:22px}
+.club-card{padding:34px;background:var(--paper);border-top:3px solid var(--gold)}
+.club-card .area{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:6px 0 14px}
+.club-card ul{list-style:none;display:grid;gap:6px;font-size:15px;color:var(--muted)}
+.club-card li::before{content:"";display:inline-block;width:6px;height:6px;background:var(--gold);margin-right:10px;transform:rotate(45deg)}
+@media(max-width:820px){.club-grid{grid-template-columns:1fr}}
+
+/* catamaran */
+.cat{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,80px);align-items:center}
+.cat img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.cat .facts{display:flex;gap:40px;margin:30px 0}
+.cat .facts div strong{display:block;font-family:var(--serif);font-size:42px;font-weight:600;color:var(--navy);line-height:1}
+.cat .facts div span{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+@media(max-width:820px){.cat{grid-template-columns:1fr}}
+
+/* phase 1 */
+.phase{background:var(--navy);color:#fff}
+.phase .head p{color:rgba(255,255,255,.72)}
+.phase-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,80px)}
+table{width:100%;border-collapse:collapse}
+td{padding:15px 0;border-bottom:1px solid rgba(255,255,255,.14);font-size:16px}
+td:last-child{text-align:right;font-family:var(--serif);font-size:18px;font-weight:500;color:var(--gold)}
+.team{display:grid;gap:18px;align-content:start}
+.team div{padding:20px 22px;border:1px solid rgba(255,255,255,.14)}
+.team b{display:block;font-family:var(--serif);font-size:19px;font-weight:600}
+.team span{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.phase small{display:block;margin-top:22px;color:rgba(255,255,255,.6);font-size:14px}
+@media(max-width:820px){.phase-grid{grid-template-columns:1fr}}
+
+/* timeline */
+.timeline{position:relative;display:grid;gap:0;max-width:820px}
+.timeline::before{content:"";position:absolute;left:112px;top:8px;bottom:8px;width:1px;background:var(--line)}
+.tl{display:grid;grid-template-columns:112px 1fr;gap:0 36px;padding:20px 0;position:relative}
+.tl .when{font-family:var(--serif);font-size:18px;color:var(--navy);font-weight:600}
+.tl::after{content:"";position:absolute;left:107px;top:30px;width:11px;height:11px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px var(--paper)}
+.tl p{color:var(--muted)}
+.tl.now .when{color:var(--gold)}
+@media(max-width:560px){.timeline::before{left:6px}.tl{grid-template-columns:1fr;padding-left:32px;gap:2px}.tl::after{left:1px}}
+
+/* contact */
+.contact{background:var(--sand);}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,80px);align-items:start}
+.contact h2{margin:14px 0 20px}
+form{display:grid;gap:16px;background:var(--paper);padding:clamp(24px,4vw,44px)}
+label{display:grid;gap:6px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+input[type=text],input[type=tel],input[type=email],select{width:100%;padding:14px 14px;border:1px solid var(--line);background:#fff;font:inherit;font-size:16px;color:var(--ink);border-radius:2px;letter-spacing:0;text-transform:none}
+input:focus,select:focus{outline:2px solid var(--gold);outline-offset:1px}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:13px;letter-spacing:0;text-transform:none;color:var(--muted)}
+.check input{margin-top:4px;accent-color:var(--navy)}
+.msg{font-size:15px;padding:12px 14px;display:none}
+.msg.ok{display:block;background:#e4efe2;color:#27492a}
+.msg.err{display:block;background:#f4e3df;color:#7a2a1e}
+@media(max-width:820px){.contact .wrap{grid-template-columns:1fr}}
+
+footer{background:var(--navy-2);color:rgba(255,255,255,.72);padding-block:56px;font-size:14px}
+footer .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
+footer .logo{margin-bottom:16px}
+footer .logo img{height:54px}
+footer p+p{margin-top:10px}
+footer .legal{font-size:12.5px;color:rgba(255,255,255,.5)}
+@media(max-width:820px){footer .wrap{grid-template-columns:1fr}}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.pillar img{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="logo" href="#topo" aria-label="VOX SUL"><img src="assets/vox-logo-branca.png" alt="Vox Imobiliária"><i></i><span>SUL</span></a>
+    <ul>
+      <li><a href="#bairro">O bairro</a></li>
+      <li><a href="#clubes">Clubes</a></li>
+      <li><a href="#catamara">Catamarã</a></li>
+      <li><a href="#fase1">Fase 1</a></li>
+      <li><a href="#cronograma">Cronograma</a></li>
+    </ul>
+    <a class="btn" href="#contato">Quero ser avisado</a>
+  </div>
+</header>
+
+<main id="topo">
+<section class="hero" style="padding:0">
+  <div class="wrap">
+    <span class="eyebrow">Torres, Rio Grande do Sul</span>
+    <h1>Uma nova forma de viver está chegando em Torres.</h1>
+    <p class="sub">O primeiro capítulo de um novo bairro, às margens do Rio Mampituba.</p>
+    <div class="cta">
+      <a class="btn" href="#contato">Receber informações em primeira mão</a>
+      <a class="btn ghost" href="#bairro">Conhecer o bairro</a>
+    </div>
+    <div class="date-chip">
+      <span>Abertura das vendas</span>
+      <b>19 de novembro</b>
+      <span id="countdown"></span>
+    </div>
+  </div>
+</section>
+
+<div class="numbers">
+  <div class="wrap">
+    <div class="num"><strong>290</strong><span>lotes na Fase 1</span></div>
+    <div class="num"><strong>42,7 ha</strong><span>de área total</span></div>
+    <div class="num"><strong>437 m²</strong><span>lote médio</span></div>
+    <div class="num"><strong>1.600 m</strong><span>de frente de rio</span></div>
+    <div class="num"><strong>44 mil m²</strong><span>de lagos</span></div>
+  </div>
+</div>
+
+<section id="bairro">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">O bairro</span>
+      <h2>Três ideias para um mesmo lugar.</h2>
+      <p class="lead">Wellness, exclusividade e náutica orientam cada decisão do projeto, da avenida principal ao último atracadouro. Um bairro planejado para ser vivido com calma, perto da água e das pessoas.</p>
+    </div>
+    <div class="pillars">
+      <article class="pillar reveal"><img src="assets/wellness.jpg" alt="Homem caminhando com seu cachorro por um deck à beira do lago" loading="lazy"><div><h3>Wellness</h3><p>Caminhar, treinar, nadar, jogar. Academia, quadras e piscinas ficam a poucos minutos de casa.</p></div></article>
+      <article class="pillar reveal"><img src="assets/exclusividade.jpg" alt="Casa de lazer entre jardins e vegetação" loading="lazy"><div><h3>Exclusividade</h3><p>Apenas 6,8 lotes por hectare, portaria controlada e uma avenida de 22 metros com canteiro central.</p></div></article>
+      <article class="pillar reveal"><img src="assets/nautica.jpg" alt="Barco ancorado em atracadouro no Rio Mampituba" loading="lazy"><div><h3>Náutica</h3><p>Marina, clube de pesca e catamarã próprio. O rio faz parte da rotina, não só da paisagem.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="film" id="filme">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Em movimento</span>
+      <h2>Um minuto para ver o que vem.</h2>
+      <p class="lead">Um passeio rápido pelo bairro e pelos clubes.</p>
+    </div>
+    <video class="reveal" controls preload="metadata" playsinline>
+      <source src="assets/motion.mp4" type="video/mp4">
+      Seu navegador não reproduz este vídeo.
+    </video>
+  </div>
+</section>
+
+<section class="clubs" id="clubes">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Clubes</span>
+      <h2>Quem compra um lote já faz parte de todos eles.</h2>
+      <p class="lead">O proprietário do lote é conveniado automaticamente aos clubes do bairro, com livre acesso e uso.</p>
+    </div>
+
+    <article class="club-feature reveal">
+      <div class="ph"><img src="assets/marina.jpg" alt="Lancha atracada em deck de madeira ao entardecer" loading="lazy"></div>
+      <div class="tx">
+        <span class="tag">Entrega em dezembro de 2029</span>
+        <h3>Marina Club</h3>
+        <p>60.000 m² para quem tem na água uma forma de viver. Os serviços que a Marina vier a oferecer poderão ser contratados à parte pelo proprietário, e a oferta será apresentada ao mercado em 2027.</p>
+      </div>
+    </article>
+
+    <article class="club-feature reveal">
+      <div class="ph"><img src="assets/golf.jpg" alt="Jogador de golfe no campo à beira do rio" loading="lazy"></div>
+      <div class="tx">
+        <span class="tag">Uso a partir do 2º semestre de 2027</span>
+        <h3>Golf Club</h3>
+        <p>O proprietário do lote usufrui do campo de golfe a partir do segundo semestre de 2027, antes mesmo da conclusão do empreendimento. Convidados pagam apenas pelo uso (pay per use).</p>
+      </div>
+    </article>
+
+    <article class="club-feature reveal">
+      <div class="ph"><img src="assets/praia.jpg" alt="Casal sentado em cadeiras de praia sob guarda-sol" loading="lazy"></div>
+      <div class="tx">
+        <span class="tag">Serviço de praia já nesta temporada</span>
+        <h3>Clube de Praia na Av. Beira-Mar</h3>
+        <p>Espaço exclusivo para os moradores, com serviços de apoio para quem quer aproveitar o mar com conforto. A estrutura completa, com todos os espaços previstos, fica pronta no verão 2027/2028.</p>
+      </div>
+    </article>
+
+    <article class="club-feature reveal">
+      <div class="ph"><img src="assets/clube-do-rio.jpg" alt="Casa do Clube do Rio com varanda e jardim" loading="lazy"></div>
+      <div class="tx">
+        <span class="tag">Entrega final em 2032</span>
+        <h3>Clube do Rio</h3>
+        <p>Um espaço de uso exclusivo dos condomínios, com atracadouro para receber as embarcações. O atracadouro fica disponível a partir da entrega do primeiro condomínio, prevista para janeiro de 2030.</p>
+      </div>
+    </article>
+
+    <div class="club-grid">
+      <div class="club-card reveal">
+        <h3>Clube Social</h3><div class="area">7.127 m²</div>
+        <ul><li>Piscina com raia de 25 m</li><li>Trapiche com acesso ao atracadouro</li><li>Lago artificial, restaurante e bar</li><li>Espaços kids e teens</li><li>Ponto de saída do catamarã</li></ul>
+      </div>
+      <div class="club-card reveal">
+        <h3>Clube de Pesca</h3><div class="area">8.776 m²</div>
+        <ul><li>Gourmet com churrasqueira e sala de troféus</li><li>45 boxes cobertos: 7 oceânicos e 38 para robalo</li><li>Boxes vendidos à parte e vinculados aos lotes</li><li>Rampa de acesso e deck com vista para o rio</li></ul>
+      </div>
+      <div class="club-card reveal">
+        <h3>Clube Esportivo</h3><div class="area">10.054 m²</div>
+        <ul><li>Academia de 300 m²</li><li>Piscina semiolímpica com spa, sauna e recovery</li><li>2 quadras de padel e 2 de tênis de saibro</li><li>Pickleball, futebol 7 e basquete</li><li>Salão para 200 pessoas</li></ul>
+      </div>
+      <div class="club-card reveal">
+        <h3>Clube de Beach Tennis</h3><div class="area">2.649 m²</div>
+        <ul><li>3 quadras descobertas</li><li>2 quadras cobertas</li><li>Espaço gourmet integrado às quadras e conectado ao lago</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="catamara">
+  <div class="wrap cat">
+    <img class="reveal" src="assets/catamara.jpg" alt="Pessoas a bordo de um catamarã no rio" loading="lazy">
+    <div class="reveal">
+      <span class="eyebrow">Catamarã exclusivo</span>
+      <h2 style="margin:14px 0 20px">Do rio até a orla, sem pegar o carro.</h2>
+      <p class="lead">O condomínio contará com um catamarã exclusivo, que liga os moradores à orla gastronômica da cidade. Da praia aos restaurantes, o trajeto também faz parte do passeio.</p>
+      <div class="facts">
+        <div><strong>30 min</strong><span>entre saídas</span></div>
+        <div><strong>12 min</strong><span>de trajeto</span></div>
+      </div>
+      <p style="color:var(--muted);font-size:15px">Saídas do Clube do Rio ao Clube Social, até a orla gastronômica.</p>
+    </div>
+  </div>
+</section>
+
+<section class="clubs" id="praca" style="padding-top:0;background:var(--paper)">
+  <div class="wrap">
+    <article class="club-feature reveal" style="background:var(--sand-2)">
+      <div class="ph"><img src="assets/praca.jpg" alt="Praça arborizada com caminhos e bancos" loading="lazy"></div>
+      <div class="tx">
+        <span class="tag">Entregue ao município em dezembro de 2029</span>
+        <h3>Praça pública</h3>
+        <p>Um presente do empreendimento para a comunidade. Projetada por Benedito Abbud, une paisagismo, convivência e natureza. Um espaço de todos, aberto à cidade.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="phase" id="fase1">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Fase 1</span>
+      <h2>Ficha técnica.</h2>
+      <p class="lead">Os números do primeiro capítulo do bairro.</p>
+    </div>
+    <div class="phase-grid">
+      <div class="reveal">
+        <table>
+          <tr><td>Área total</td><td>427.309 m² (42,7 ha)</td></tr>
+          <tr><td>Lotes</td><td>290</td></tr>
+          <tr><td>Lote médio</td><td>437 m²</td></tr>
+          <tr><td>Variação de tamanho</td><td>390 a 765 m²</td></tr>
+          <tr><td>Densidade</td><td>6,8 lotes/ha</td></tr>
+          <tr><td>Frente de rio</td><td>1.600 m</td></tr>
+          <tr><td>Lagos</td><td>44.385 m²</td></tr>
+          <tr><td>APP do Rio Mampituba</td><td>163.279 m²</td></tr>
+          <tr><td>Área de lazer dos clubes</td><td>26.639 m²</td></tr>
+        </table>
+        <small>Pórtico com guarita blindada, ambulatório e duas portarias: uma para moradores e outra para serviço.</small>
+      </div>
+      <div class="team reveal">
+        <div><b>Rodolfo Fork</b><span>Urbanismo e arquitetura | Peatonal</span></div>
+        <div><b>Benedito Abbud</b><span>Paisagismo</span></div>
+        <div><b>Francisco Tubino</b><span>Interiores | Isco Arquitetos</span></div>
+        <div><b>R Dimer + Bloque</b><span>Incorporação | Duas empresas, um mesmo movimento</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cronograma">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Cronograma</span>
+      <h2>O bairro se abre por etapas.</h2>
+      <p class="lead">Boa parte da vida do bairro começa antes da obra terminar. Estas são as datas previstas até agora.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl now reveal"><div class="when">19 nov 2026</div><p>Abertura das vendas da Fase 1, com 290 lotes.</p></div>
+      <div class="tl reveal"><div class="when">Temporada 26/27</div><p>Serviço de praia disponível no Clube de Praia da Av. Beira-Mar.</p></div>
+      <div class="tl reveal"><div class="when">2027</div><p>Golf Club liberado para uso no segundo semestre. Apresentação da oferta de serviços da Marina.</p></div>
+      <div class="tl reveal"><div class="when">Verão 27/28</div><p>Estrutura completa do Clube de Praia.</p></div>
+      <div class="tl reveal"><div class="when">Dez 2029</div><p>Entrega da Marina e da praça pública.</p></div>
+      <div class="tl reveal"><div class="when">Jan 2030</div><p>Primeiro condomínio e atracadouro do Clube do Rio.</p></div>
+      <div class="tl reveal"><div class="when">2032</div><p>Entrega final do Clube do Rio.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contato">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" style="color:var(--navy)">Contato</span>
+      <h2>Seja avisado antes da abertura.</h2>
+      <p class="lead">Deixe seus dados e um consultor da Vox entra em contato com as informações do lançamento, a tabela e as condições da Fase 1.</p>
+    </div>
+    <form id="lead" class="reveal" novalidate>
+      <label>Nome<input type="text" id="f-nome" name="nome" autocomplete="name" required></label>
+      <label>WhatsApp<input type="tel" id="f-telefone" name="telefone" autocomplete="tel" inputmode="tel" placeholder="(00) 00000-0000" required></label>
+      <label>E-mail<input type="email" id="f-email" name="email" autocomplete="email" required></label>
+      <label>Seu interesse
+        <select id="f-interesse" name="interesse">
+          <option>Morar em Torres</option>
+          <option>Casa de veraneio</option>
+          <option>Investimento</option>
+          <option>Ainda estou conhecendo</option>
+        </select>
+      </label>
+      <label class="check"><input type="checkbox" id="f-lgpd" name="lgpd" required><span>Concordo em receber contato sobre o empreendimento e com o tratamento dos meus dados conforme a LGPD.</span></label>
+      <button class="btn" type="submit">Quero receber as informações</button>
+      <div class="msg" id="msg" role="status"></div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="logo" href="#topo" aria-label="VOX SUL"><img src="assets/vox-logo-branca.png" alt="Vox Imobiliária"><i></i><span>SUL</span></a>
+      <p>Comercialização: Vox Imobiliária (CRECI 0953J) e imobiliárias parceiras.</p>
+      <p>Incorporação: R Dimer + Bloque.</p>
+    </div>
+    <div class="legal">
+      <p>Imagens meramente ilustrativas. Projeto, áreas, prazos e serviços sujeitos a alterações. Os serviços de Marina e demais clubes poderão ser contratados à parte. Valores e condições sob consulta.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* CONFIGURAÇÃO DO FORMULÁRIO
+   Preencha RD_PUBLIC_TOKEN com o token público do RD Station para os contatos
+   chegarem direto no CRM. Enquanto estiver vazio, o formulário roda em modo de teste. */
+const CONFIG = {
+  RD_PUBLIC_TOKEN: "",
+  RD_IDENTIFIER: "vox-sul-lancamento",
+  LAUNCH_DATE: "2026-11-19T00:00:00-03:00"
+};
+
+const nav = document.getElementById("nav");
+const onScroll = () => nav.classList.toggle("solid", window.scrollY > 60);
+onScroll(); addEventListener("scroll", onScroll, {passive:true});
+
+/* contagem regressiva */
+(function(){
+  const el = document.getElementById("countdown");
+  const diff = new Date(CONFIG.LAUNCH_DATE) - new Date();
+  const days = Math.ceil(diff / 86400000);
+  if (days > 1) el.textContent = "faltam " + days + " dias";
+  else if (days === 1) el.textContent = "é amanhã";
+  else if (days === 0) el.textContent = "é hoje";
+  else el.textContent = "vendas abertas";
+})();
+
+/* revelar ao rolar */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target);} }), {threshold:.12});
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+/* formulário */
+const form = document.getElementById("lead"), msg = document.getElementById("msg");
+function show(type, text){ msg.className = "msg " + type; msg.textContent = text; }
+form.addEventListener("submit", async ev => {
+  ev.preventDefault();
+  const d = Object.fromEntries(new FormData(form));
+  if (!d.nome || !d.telefone || !d.email || !form.lgpd.checked) { show("err", "Preencha nome, WhatsApp e e-mail e aceite o consentimento para continuar."); return; }
+  if (!CONFIG.RD_PUBLIC_TOKEN) { show("err", "Modo de teste: o formulário ainda não está conectado ao RD Station, então nenhum contato foi enviado."); return; }
+  try {
+    const r = await fetch("https://api.rd.services/platform/conversions?api_key=" + encodeURIComponent(CONFIG.RD_PUBLIC_TOKEN), {
+      method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({event_type:"CONVERSION", event_family:"CDP", payload:{
+        conversion_identifier: CONFIG.RD_IDENTIFIER, name: d.nome, email: d.email,
+        personal_phone: d.telefone, cf_interesse: d.interesse, legal_bases:[{category:"communications",type:"consent",status:"granted"}]}})
+    });
+    if (!r.ok) throw new Error(r.status);
+    form.reset(); show("ok", "Recebemos seu contato. Em breve um consultor da Vox fala com você.");
+  } catch (e) { show("err", "Não foi possível enviar agora. Tente novamente em instantes."); }
+});
+</script>
+</body>
+</html>
