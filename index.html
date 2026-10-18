@@ -529,6 +529,7 @@ form.addEventListener("submit", async ev => {
         name: d.nome, email: d.email, personal_phone: d.telefone, cf_interesse: d.interesse})
     });
     if (!r.ok) throw new Error(r.status);
+    if (window.fbq) fbq("track","Lead");
     form.reset(); show("ok", "Recebemos seu contato. Em breve um consultor da Vox fala com você.");
   } catch (e) { show("err", "Não foi possível enviar agora. Tente novamente em instantes."); }
 });
@@ -541,16 +542,23 @@ form.addEventListener("submit", async ev => {
   </div>
 </div>
 <script>
-/* Cookies e monitoramento do RD Station: so carrega apos o aceite */
+/* Cookies e monitoramento (RD Station e Meta Pixel): so carrega apos o aceite */
 (function(){
   var KEY="vox_cookies", box=document.getElementById("cookie");
   function get(){try{return localStorage.getItem(KEY)}catch(e){return null}}
   function set(v){try{localStorage.setItem(KEY,v)}catch(e){}}
+  function loadPixel(){
+    if(window.fbq) return;
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','1086952192512194');
+    fbq('track','PageView');
+  }
   function loadRD(){
     if(window.__rdLoaded) return; window.__rdLoaded=true;
     var sc=document.createElement("script");sc.async=true;
     sc.src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/3513ed58-28be-4d38-bd80-30ec46dfe3a4-loader.js";
     document.body.appendChild(sc);
+    loadPixel();
   }
   var v=get();
   if(v==="yes") loadRD(); else if(v!=="no") box.hidden=false;
