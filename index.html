@@ -171,6 +171,20 @@ input:focus,select:focus{outline:2px solid var(--gold);outline-offset:1px}
 .msg.err{display:block;background:#f4e3df;color:#7a2a1e}
 @media(max-width:820px){.contact .wrap{grid-template-columns:1fr}}
 
+
+.devs{background:var(--navy-2);color:#fff;padding-block:clamp(56px,8vw,96px);border-top:1px solid rgba(255,255,255,.08)}
+.devs .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(32px,6vw,80px);align-items:center}
+.devs h2{margin:14px 0 18px}
+.devs p{color:rgba(255,255,255,.75);max-width:52ch}
+.devs-logos{display:flex;align-items:center;justify-content:center;gap:clamp(24px,4vw,48px);flex-wrap:wrap}
+.devs-logos img{width:auto;display:block}
+.devs-logos .rd{height:clamp(34px,4.4vw,52px)}
+.devs-logos .bq{height:clamp(64px,8vw,92px)}
+.devs-logos .plus{font-size:28px;color:var(--gold);font-weight:300}
+.devs-facts{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px}
+.devs-facts b{display:block;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:6px}
+.devs-facts span{font-size:15.5px;color:rgba(255,255,255,.78);line-height:1.55}
+@media(max-width:820px){.devs .wrap{grid-template-columns:1fr}.devs-logos{justify-content:flex-start}.devs-facts{grid-template-columns:1fr}}
 footer{background:var(--navy-2);color:rgba(255,255,255,.72);padding-block:56px;font-size:14px}
 footer .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
 footer .logo{margin-bottom:16px}
@@ -229,6 +243,25 @@ footer .legal{font-size:12.5px;color:rgba(255,255,255,.5)}
     <div class="num"><strong>44 mil m²</strong><span>de lagos</span></div>
   </div>
 </div>
+
+<section class="devs" id="incorporacao">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Incorporação</span>
+      <h2>Duas empresas, um mesmo movimento.</h2>
+      <p>O bairro é desenvolvido por duas empresas que se complementam: uma referência em Torres, com décadas de atuação, e uma urbanizadora especializada em bairros planejados.</p>
+      <div class="devs-facts">
+        <div><b>R Dimer</b><span>Referência em Torres, com décadas de atuação e reconhecimento no mercado imobiliário da cidade.</span></div>
+        <div><b>Bloque</b><span>Urbanizadora especializada em desenvolvimento horizontal, loteamentos e bairros planejados.</span></div>
+      </div>
+    </div>
+    <div class="devs-logos reveal">
+      <img class="rd" src="assets/rdimer-branca.png" alt="R Dimer">
+      <span class="plus" aria-hidden="true">+</span>
+      <img class="bq" src="assets/bloque-branca.png" alt="Bloque">
+    </div>
+  </div>
+</section>
 
 <section id="bairro">
   <div class="wrap">
