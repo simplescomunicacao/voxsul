@@ -51,7 +51,10 @@ h3{font-size:clamp(20px,2.4vw,26px)}
 /* nav */
 .nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,box-shadow .3s}
 .nav.solid{background:rgba(14,26,51,.94);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(255,255,255,.08)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:108px;transition:height .3s}
+.nav.solid .wrap{height:84px}
+.nav.solid .logo img{height:52px}
+.logo img{transition:height .3s}
 .logo{display:inline-flex;align-items:center;gap:14px;text-decoration:none}
 .logo img{height:64px;width:auto}
 .logo i{width:1px;height:26px;background:rgba(255,255,255,.35)}
@@ -61,7 +64,7 @@ h3{font-size:clamp(20px,2.4vw,26px)}
 .nav ul a:hover{color:#fff}
 .nav .btn{padding:11px 20px;font-size:12px}
 @media(max-width:900px){.nav ul{display:none}}
-@media(max-width:560px){.logo{gap:10px}.logo img{height:50px}.logo span{font-size:15px}.logo i{height:20px}.nav .btn{padding:10px 12px;font-size:10.5px;white-space:nowrap}}
+@media(max-width:560px){.nav .wrap{height:88px}.nav.solid .wrap{height:72px}.nav.solid .logo img{height:42px}.logo{gap:10px}.logo img{height:50px}.logo span{font-size:15px}.logo i{height:20px}.nav .btn{padding:10px 12px;font-size:10.5px;white-space:nowrap}}
 
 /* hero */
 .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;background:var(--navy-2) url(assets/rio-por-do-sol.jpg) center/cover no-repeat;isolation:isolate}
