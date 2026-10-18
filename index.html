@@ -530,7 +530,7 @@ form.addEventListener("submit", async ev => {
     });
     if (!r.ok) throw new Error(r.status);
     if (window.fbq) fbq("track","Lead");
-    if (window.gtag) gtag("event","generate_lead");
+    if (window.gtag) { gtag("event","generate_lead"); gtag("event","conversion",{send_to:"AW-18515678240/2IPcCM69jqEdEKCo-_xE"}); }
     form.reset(); show("ok", "Recebemos seu contato. Em breve um consultor da Vox fala com você.");
   } catch (e) { show("err", "Não foi possível enviar agora. Tente novamente em instantes."); }
 });
@@ -560,6 +560,7 @@ form.addEventListener("submit", async ev => {
     window.gtag=function(){dataLayer.push(arguments)};
     gtag('js',new Date());
     gtag('config','G-6639JESC3J');
+    gtag('config','AW-18515678240');
     var g=document.createElement("script");g.async=true;
     g.src="https://www.googletagmanager.com/gtag/js?id=G-6639JESC3J";
     document.body.appendChild(g);
