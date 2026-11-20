@@ -205,6 +205,7 @@ footer .legal{font-size:12.5px;color:rgba(255,255,255,.5)}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
 .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.pillar img{transition:none}}
+.hp{position:absolute!important;left:-9999px;width:1px;height:1px;overflow:hidden}
 </style>
 </head>
 <body>
@@ -463,6 +464,7 @@ footer .legal{font-size:12.5px;color:rgba(255,255,255,.5)}
           <option>Ainda estou conhecendo</option>
         </select>
       </label>
+      <div class="hp" aria-hidden="true"><label>Não preencha este campo<input type="text" name="empresa" tabindex="-1" autocomplete="off"></label></div>
       <label class="check"><input type="checkbox" id="f-lgpd" name="lgpd" required><span>Concordo em receber contato sobre o empreendimento e com o tratamento dos meus dados conforme a LGPD.</span></label>
       <button class="btn" type="submit">Quero receber as informações</button>
       <div class="msg" id="msg" role="status"></div>
@@ -519,6 +521,7 @@ function show(type, text){ msg.className = "msg " + type; msg.textContent = text
 form.addEventListener("submit", async ev => {
   ev.preventDefault();
   const d = Object.fromEntries(new FormData(form));
+  if (d.empresa) { form.reset(); show("ok", "Recebemos seu contato. Em breve um consultor da Vox fala com você."); return; }
   if (!d.nome || !d.telefone || !d.email || !form.lgpd.checked) { show("err", "Preencha nome, WhatsApp e e-mail e aceite o consentimento para continuar."); return; }
   if (!CONFIG.RD_PUBLIC_TOKEN) { show("err", "Modo de teste: o formulário ainda não está conectado ao RD Station, então nenhum contato foi enviado."); return; }
   try {
